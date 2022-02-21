@@ -35,8 +35,9 @@ if (savedUserName === null) { //null 즉 저장된 username이 없으면(로그�
    
 }
 
-function logoutBtnClick() {    
-    localStorage.clear();
+function logoutBtnClick() { 
+    localStorage.removeItem(USERNAME_KEY); 
+    //localStorage.clear();
     logoutBtn.classList.add(HIDDEN_CLASSNAME);
     location.reload();
 }
