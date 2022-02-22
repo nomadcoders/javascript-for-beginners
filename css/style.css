@@ -1,5 +1,4 @@
 body {
-  height: 100vh;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#a18cd1), to(#fbc2eb));
   background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
   color: #222;
@@ -81,6 +80,25 @@ body #header .logout-btn {
   color: #fff;
   cursor: pointer;
   height: 30px;
+}
+
+@media all and (max-width: 1024px) {
+  body #header {
+    padding: 100px 0;
+  }
+  body #header .login-box {
+    width: 80%;
+  }
+}
+
+@media all and (max-width: 480px) {
+  body #header {
+    padding-bottom: 25px;
+  }
+}
+
+body .container {
+  position: relative;
 }
 
 body .container .todo-area {
@@ -165,7 +183,19 @@ body .container .todo-area #todo-list li button::after {
   font-weight: 500;
 }
 
-body .widget {
+@media all and (max-width: 480px) {
+  body .container .todo-area {
+    width: 90%;
+  }
+}
+
+@media all and (max-width: 480px) {
+  body .container {
+    padding-bottom: 100px;
+  }
+}
+
+body .container .widget {
   position: fixed;
   right: 0;
   top: 50%;
@@ -177,11 +207,24 @@ body .widget {
   border-top-left-radius: 10px;
 }
 
-body .widget #weather {
+body .container .widget #weather {
   text-align: center;
 }
 
-body .widget #weather span {
+body .container .widget #weather span {
   display: block;
+}
+
+@media all and (max-width: 480px) {
+  body .container .widget {
+    position: absolute;
+    top: initial;
+    -webkit-transform: initial;
+            transform: initial;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */

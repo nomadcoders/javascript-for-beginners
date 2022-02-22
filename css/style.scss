@@ -1,5 +1,5 @@
 body {    
-    height: 100vh;
+
     background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
     color: #222;
 
@@ -14,7 +14,7 @@ body {
 
     #header {
         text-align: center;
-        padding: 20px 0;
+        padding: 20px 0; 
 
         #clock {
             font-size: 18px;
@@ -22,13 +22,13 @@ body {
             //background: rgba(0,0,0,0.2);   
             width: 300px;
             margin: 0 auto;   
-            color: #fff;      
+            color: #fff;    
         }
         .login-box {
             width: 500px;
             margin: auto;
             margin-top: 20px;
-            height: 85px;
+            height: 85px;         
             
             #login-form {
                 display: flex;
@@ -51,14 +51,19 @@ body {
                     color: #fff;
 
                 }
+
+                
             }
+
             #greeting {
                 background: rgba(0,0,0,0.3);
                 color: #fff;
                 line-height: 85px;
                 border-radius: 40px;
             }
+
         }
+
         .logout-btn {
             position: absolute;
             top: 10px;
@@ -71,9 +76,24 @@ body {
             cursor: pointer;
             height: 30px;
         }
+        
+        @media all and (max-width:1024px) {
+            padding: 100px 0;
+
+            .login-box {
+                width: 80%;
+            }
+            
+        }
+
+        @media all and (max-width:480px) {
+            padding-bottom: 25px;
+
+            
+        }
     }
     .container {
-
+        position: relative;
         .todo-area {
             box-sizing: border-box;
             width: 500px;
@@ -150,25 +170,45 @@ body {
                     }
                 }
             }
-        }        
-        
-    }
+            @media all and (max-width:480px) {
 
-    .widget {
-        position: fixed;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        background: rgba(0,0,0,0.3);
-        padding: 20px;
-        border-bottom-left-radius: 10px;
-        border-top-left-radius: 10px;        
-
-        #weather {
-            text-align: center;
+            width: 90%;
             
-            span {
-                display: block;
+            }
+        }        
+        @media all and (max-width:480px) {
+            padding-bottom: 100px;
+
+            
+        }
+        .widget {
+            position: fixed;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.3);
+            padding: 20px;
+            border-bottom-left-radius: 10px;
+            border-top-left-radius: 10px;        
+    
+            #weather {
+                text-align: center;
+                
+                span {
+                    display: block;
+                }
+            }
+    
+            @media all and (max-width:480px) {
+                position: absolute;
+                top: initial;
+                transform: initial;
+                bottom: 0;
+                width: 100%;
+                padding: 10px 0;
+                border-radius: 0;
+    
+                
             }
         }
     }
