@@ -3,6 +3,7 @@
   <head>
     <title>To Do List</title>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="css/style.css">
     
   </head>
@@ -28,16 +29,18 @@
           <input type="text" placeholder="Write a To Do and Press Enter" required name="" id="">
           <button>Add</button>
         </form>
-        <ul id="todo-list"></ul>        
-      </div>           
-    </div>
+        <ul id="todo-list"></ul> 
+        <div class="widget">
+          <div id="weather">
+              <span class="city"></span>
+              <span class="weather"></span>        
+            </div>
+          </div>
+        </div>    
+      </div>     
+      
+      
 
-    <div class="widget">
-      <div id="weather">
-        <span class="city"></span>
-        <span class="weather"></span>        
-      </div>
-    </div>
 
     <script src="src/app.js"></script>
     <script src="src/clock.js"></script>
