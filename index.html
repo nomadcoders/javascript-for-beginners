@@ -1,40 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
+    <title>To Do List</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Momentum App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/style.css">
+    
   </head>
+
   <body>
-    <h2 id="clock">00:00:00</h2>
-    <form class="hidden" id="login-form">
-      <input
-        required
-        maxlength="15"
-        type="text"
-        placeholder="What is your name?"
-      />
-      <input type="submit" value="Log In" />
-    </form>
-    <h1 class="hidden" id="greeting"></h1>
-    <form id="todo-form">
-      <input type="text" placeholder="Write a To Do and Press Enter" required />
-    </form>
-    <ul id="todo-list"></ul>
-    <div id="quote">
-      <span></span>
-      <span></span>
-    </div>
-    <div id="weather">
-      <span></span>
-      <span></span>
-    </div>
-    <script src="js/greetings.js"></script>
-    <script src="js/clock.js"></script>
-    <script src="js/quotes.js"></script>
-    <script src="js/background.js"></script>
-    <script src="js/todo.js"></script>
-    <script src="js/weather.js"></script>
+
+    <header id="header">
+      <h2 id="clock">00:00:00</h2>
+      <div class="login-box">
+        <form action="" id="login-form" class="hidden">
+          <input required maxlength="15" type="text" placeholder="What is your name? :)">
+          <button>Log In</button>
+        </form>
+        <h1 id="greeting" class="hidden"></h1>
+      </div>
+      <button class="logout-btn hidden">Logout</button>
+    </header>
+
+    <div class="container">      
+      <div class="todo-area hidden">
+        <h2>To Do List</h2>
+        <form id="todo-form" action="">          
+          <input type="text" placeholder="Write a To Do and Press Enter" required name="" id="">
+          <button>Add</button>
+        </form>
+        <ul id="todo-list"></ul> 
+        <div class="widget">
+          <div id="weather">
+              <span class="city"></span>
+              <span class="weather"></span>        
+            </div>
+          </div>
+        </div>    
+      </div>     
+      
+      
+
+
+    <script src="src/app.js"></script>
+    <script src="src/clock.js"></script>
+    <script src="src/todo.js"></script>
+    <script src="src/background.js"></script>
+    <script src="src/weather.js"></script>
   </body>
 </html>
